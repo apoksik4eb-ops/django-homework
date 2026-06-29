@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-xl font-bold">Таблица умножения:</h1>
+    <table class="border-collapse border border-gray-300">
+        <thead>
+            <tr>
+                <th class="border px-2 py-1 text-center align-middle">&times;</th>
+                {% for h in headers %}
+                    <th class="border px-2 py-1 text-center align-middle font-bold">{{ h }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row_label, cells in rows %}
+                <tr>
+                    <td class="border px-2 py-1 text-center align-middle font-bold">{{ row_label }}</td>
+                    {% for num in cells %}
+                        <td class="border px-2 py-1 text-center align-middle">{{ num }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
