@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <div>
+        <h1 class="text-xl font-bold pb-6">Топ лучших книг:</h1>
+
+        {% for place, book in top_books.items %}
+            <p class="text-sm py-1 hover:text-blue-500">
+                <a href="/books/{{ place }}/">{{ book.title }}</a>
+            </p>
+        {% endfor %}
+    </div>
+{% endblock %}

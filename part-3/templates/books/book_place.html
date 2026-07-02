@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <div>
+        <h1 class="text-xl font-bold pb-6">{{ book.title }}</h1>
+    
+        <p class="text-sm"><b>Место:</b> {{ place }}</p>
+        <p class="text-sm"><b>Автор:</b> {{ book.author }}</p>
+        <p class="text-sm"><b>Год:</b> {{ book.year }}</p>
+    </div>
+{% endblock %}
