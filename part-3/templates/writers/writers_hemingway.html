@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="text-2xl font-bold">Эрнест Хемингуэй</h1>
+
+<h2 class="mt-6 text-xl font-semibold">Книги:</h2>
+
+{% for book in books %}
+    <p class="py-1">
+        <a href="/writers/Hemingway/{{ book.slug }}/"
+            class="hover:text-blue-500">{{ book.title }}
+        </a>
+    </p>
+{% endfor %}
+
+{% endblock %}

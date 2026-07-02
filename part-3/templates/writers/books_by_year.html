@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="text-2xl font-bold">
+    Книги {{ writer }} за {{ year }} год
+</h1>
+
+{% for place, book in books %}
+    <p class="py-2">
+        <a href="/books/{{ place }}/" class="hover:text-blue-500">
+            {{ book.title }}
+        </a>
+    </p>
+{% endfor %}
+
+{% endblock %}
